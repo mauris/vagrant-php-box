@@ -4,7 +4,7 @@ class apache {
     require => Exec["apt-get update"]
   }
 
-  service { "apache2":
+  service { "apache":
     ensure => running,
     require => Package["apache2"],
   }
@@ -12,7 +12,7 @@ class apache {
   file { '/var/www':
     ensure => link,
     target => "/vagrant",
-    notify => Service['apache2'],
+    notify => Service['apache'],
     force  => true
   }
 }

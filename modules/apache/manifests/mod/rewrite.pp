@@ -5,6 +5,7 @@ class apache::mod::rewrite {
     ensure => link,
     target => "/etc/apache2/mods-available/rewrite.load",
     require => Package["apache2"]
+    notify => Service['apache']
   }
   
 }
