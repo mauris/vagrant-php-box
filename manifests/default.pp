@@ -1,5 +1,4 @@
 include system
-include system::bootstrap
 include apache
 include apache::mod::rewrite
 include php
