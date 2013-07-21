@@ -1,0 +1,4 @@
+[submodule "modules/php"]
+	path = modules/php
+	url = https://github.com/saz/puppet-php.git
+	branch = master
