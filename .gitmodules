@@ -10,3 +10,6 @@
 	path = modules/composer
 	url = https://github.com/willdurand/puppet-composer.git
 	branch = master
+[submodule "modules/stdlib"]
+	path = modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
