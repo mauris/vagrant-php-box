@@ -4,5 +4,5 @@ include php::apache2
 include php
 include extras
 include extras::pear
-include extras::composer
+include composer
 include mysql
