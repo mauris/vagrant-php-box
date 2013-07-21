@@ -1,5 +1,5 @@
 class extras::pear {
-  include php
+  include extras
 
 # upgrade PEAR
   exec { "pear upgrade":

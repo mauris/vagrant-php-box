@@ -1,5 +1,5 @@
-class php::composer {
-  include php
+class extras::composer {
+  include extras
 
   exec { "download composer":
     path => "/usr/bin:/bin:/usr/local/bin",

@@ -1,7 +1,7 @@
 include system
 include apache
-include apache::mod::rewrite
+include php::apache2
 include php
-include php::pear
-include php::composer
+include extras::pear
+include extras::composer
 include mysql
