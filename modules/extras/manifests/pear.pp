@@ -1,4 +1,4 @@
-class php::pear {
+class extras::pear {
   include php
 
 # upgrade PEAR
