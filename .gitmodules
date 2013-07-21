@@ -2,10 +2,6 @@
 	path = modules/php
 	url = https://github.com/saz/puppet-php.git
 	branch = master
-[submodule "modules/apache"]
-	path = modules/apache
-	url = https://github.com/example42/puppet-apache.git
-	branch = master
 [submodule "modules/composer"]
 	path = modules/composer
 	url = https://github.com/willdurand/puppet-composer.git
@@ -13,3 +9,6 @@
 [submodule "modules/stdlib"]
 	path = modules/stdlib
 	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
+[submodule "modules/apache"]
+	path = modules/apache
+	url = https://github.com/puppetlabs/puppetlabs-apache.git
