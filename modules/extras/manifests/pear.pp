@@ -1,6 +1,11 @@
 class extras::pear {
   include extras
 
+# install PEAR
+  package { "php-pear":
+    require => Exec["apt-get update"]
+  }
+
 # upgrade PEAR
   exec { "pear upgrade":
     path => "/usr/bin:/bin:/usr/local/bin",
