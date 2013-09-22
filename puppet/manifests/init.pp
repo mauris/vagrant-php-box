@@ -8,4 +8,6 @@ package { $packages:
     ensure => present,
     require => Exec["apt-update"]
 }
+
+include php
 include composer
