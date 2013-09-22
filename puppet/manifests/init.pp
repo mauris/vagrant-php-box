@@ -10,7 +10,13 @@ package { $packages:
 }
 
 class { 'apache':
-    httpd_dir => '/vagrant/web'
+    httpd_dir => '/vagrant/web',
+    default_vhost => false
+}
+
+apache::vhost { 'default':
+    docroot => '/vagrant/web',
+    port => 80
 }
 
 include php
