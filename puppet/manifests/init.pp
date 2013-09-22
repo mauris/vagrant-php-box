@@ -9,5 +9,9 @@ package { $packages:
     require => Exec["apt-update"]
 }
 
+class { 'apache':
+    httpd_dir => '/vagrant/web'
+}
+
 include php
 include composer
