@@ -1,7 +1,7 @@
 class php {
   package {'php5':
     ensure => present,
-    name => 'php',
+    alias => 'php',
     require => Exec['apt-update']
   }
 
