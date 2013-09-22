@@ -2,3 +2,7 @@
 	path = puppet/modules/apache
 	url = https://github.com/puppetlabs/puppetlabs-apache.git
 	branch = master
+[submodule "puppet/modules/stdlib"]
+	path = puppet/modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
+	branch = master
