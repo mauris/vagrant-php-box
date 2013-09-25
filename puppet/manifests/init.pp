@@ -5,19 +5,26 @@ exec{ 'apt-update':
 
 $packages = ["curl", "vim", "git"]
 package { $packages:
-    ensure => present,
+    ensure => installed,
     require => Exec["apt-update"]
 }
 
 class { 'apache':
-    httpd_dir => '/vagrant/web',
+    mpm_module => prefork,
     default_vhost => false
 }
 
 apache::vhost { 'default':
     docroot => '/vagrant/web',
-    port => 80
+    port => 80,
+    override => ['All']
 }
 
+composer::run{ 'composer run':
+    path => '/vagrant/app'
+}
+
+include apache::mod::php
+include apache::mod::rewrite
 include php
 include composer
