@@ -10,3 +10,7 @@
 	path = puppet/modules/concat
 	url = https://github.com/puppetlabs/puppetlabs-concat.git
 	branch = master
+[submodule "puppet/modules/augeas"]
+	path = puppet/modules/augeas
+	url = https://github.com/camptocamp/puppet-augeas.git
+	branch = master
