@@ -6,7 +6,7 @@ class php {
     notify => Service['apache2']
   }
 
-  $packages = ["php5-cli", "php5-cgi", "php5-mysql", "php-pear", "php5-dev", "php5-gd"]
+  $packages = ["php5-cli", "php5-cgi", "php5-mysql", "php-pear", "php5-dev", "php5-gd", "php-apc"]
 
   package { $packages:
     ensure => installed,
