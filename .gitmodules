@@ -14,3 +14,6 @@
 	path = puppet/modules/augeas
 	url = https://github.com/camptocamp/puppet-augeas.git
 	branch = master
+[submodule "puppet/modules/pear"]
+	path = puppet/modules/pear
+	url = https://github.com/rafaelfelix/puppet-pear.git
