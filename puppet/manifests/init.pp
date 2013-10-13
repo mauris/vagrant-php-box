@@ -24,6 +24,7 @@ composer::run{ 'composer run':
     path => '/vagrant/app'
 }
 
+include augeas
 include apache::mod::php
 include apache::mod::rewrite
 include php

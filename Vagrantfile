@@ -12,6 +12,8 @@ Vagrant.configure("2") do |config|
       webconfig.vm.provision :shell, :path => "vagrant.sh"
     end
 
+    webconfig.vm.provision :shell, :inline => "sudo apt-get update && sudo apt-get install puppet -y"
+
     # enable puppet
     webconfig.vm.provision :puppet do |puppet|
       puppet.manifests_path = "puppet/manifests"
@@ -24,6 +26,8 @@ Vagrant.configure("2") do |config|
   config.vm.define "db" do |dbconfig|
     dbconfig.vm.box = "precise64"
     dbconfig.vm.network :forwarded_port, guest: 3306, host: 13306
+
+    dbconfig.vm.provision :shell, :inline => "sudo apt-get update && sudo apt-get install puppet -y"
 
     dbconfig.vm.provision :puppet do |puppet|
       puppet.manifests_path = "puppet/manifests"
