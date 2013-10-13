@@ -27,4 +27,5 @@ composer::run{ 'composer run':
 include apache::mod::php
 include apache::mod::rewrite
 include php
+include pear
 include composer

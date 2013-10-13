@@ -24,13 +24,9 @@ class php {
     require => Package["php-pear"]
   }
 
-  exec { "phpunit-install":
-    command => "/usr/bin/pear install pear.phpunit.de/PHPUnit",
-    require => Package["php-pear"]
+  pear::package { "PHPUnit":
+    repository => "pear.phpunit.de",
   }
 
-  exec { "phpcs-install":
-    command => "/usr/bin/pear install PHP_CodeSniffer",
-    require => Package["php-pear"]
-  }
+  pear::package { "PHP_CodeSniffer": }
 }
